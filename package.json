@@ -1,0 +1,14 @@
+{
+  "name": "downdetector-scraper",
+  "version": "1.0.0",
+  "description": "Scraper για το downdetector.gr με Puppeteer Stealth",
+  "main": "down-det.js",
+  "scripts": {
+    "start": "node down-det.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.34.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
