@@ -52,7 +52,8 @@ function postJson(urlString, payload) {
   let page = null;
 
   try {
-    console.log(`Launching Stealth Puppeteer... (Server Mode: ${isServer})`);
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] Launching Stealth Puppeteer... (Server Mode: ${isServer})`);
     
     // Δυναμικές ρυθμίσεις ανάλογα το περιβάλλον (Local vs Docker)
     const launchOptions = {
@@ -182,9 +183,10 @@ function postJson(urlString, payload) {
     } catch (e) {
       console.error("Failed to send error webhook:", e);
     }
-    process.exitCode = 1;
+    process.exitCode = 0;
 
   } finally {
     if (browser) await browser.close();
   }
+
 })();
