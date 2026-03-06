@@ -37,5 +37,8 @@ COPY . .
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 
+#Port
+EXPOSE 3000
+
 # Εντολή εκκίνησης
 CMD ["npm", "start"]
